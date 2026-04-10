@@ -1,5 +1,8 @@
 #  Twitch Selenium Framework
 
+[![Selenium Tests](https://github.com/Kathain/twitch-selenium-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/Kathain/twitch-selenium-framework/actions/workflows/ci.yml)
+
+
 Automated UI test framework for Twitch web app using **Python + Selenium + pytest** with Chrome Mobile Emulation (Pixel 7).
 
 ![demo.gif](demo.gif)
