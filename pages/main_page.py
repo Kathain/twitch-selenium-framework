@@ -27,7 +27,8 @@ class MainPage(BasePage):
 
     @allure.step("Search for game: {game_name}")
     def search_game(self, game_name):
-        self.click_element(self.SEARCH_BUTTON)
+        search_btn = self.wait_for_element(self.SEARCH_BUTTON)
+        self.js_click(search_btn)
         self.click_element(self.SEARCH_INPUT)
         self.type_text(self.SEARCH_INPUT, game_name + Keys.ENTER)
 
