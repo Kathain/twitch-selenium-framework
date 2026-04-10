@@ -11,13 +11,19 @@ class MainPage(BasePage):
 
     @allure.step("Close popup")
     def close_popup(self):
-        element = self.wait_for_element(self.KEEP_USING_WEB)
-        self.js_click(element)
+        try:
+            element = self.wait_for_element(self.KEEP_USING_WEB)
+            self.js_click(element)
+        except:
+            pass
 
     @allure.step("Accept cookies")
     def accept_cookies(self):
-        cookies = self.wait_for_element(self.ACCEPT_COOKIES)
-        self.js_click(cookies)
+        try:
+            cookies = self.wait_for_element(self.ACCEPT_COOKIES)
+            self.js_click(cookies)
+        except:
+            pass
 
     @allure.step("Search for game: {game_name}")
     def search_game(self, game_name):
